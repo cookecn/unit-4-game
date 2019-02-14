@@ -5,7 +5,7 @@ Homework 4
 *@cookecn
 
 # Technology
-*HTMl, CSS, and Media Queries
+*Bootstrap, CSS, and jQuery*
 
 # About
 * unit-4-game is my fourth homework assignment for the Vanderbilt University Coding Bootcamp. This project has us creating another game, this time using jQuery! The game will have the user attempt to match a number to the computer generated number using 4 crystals (each with their own random generated number per round. If the user can match the numbers, user wins.
