@@ -7,115 +7,116 @@
     <title>unit-4-game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body background="assets/images/wood-background.jpg">
 
-    <div class="wrapper">
-        <div class="container">
-            <h1>CrystalsCollector!</h1>
-        </div>
+<div class="wrapper">
+    <div class="container">
+        <h1>CrystalsCollector!</h1>
+    </div>
+    <br>
+    <div class="container">
+        <p>
+            You will be given a random number at the start of the game.
+        </p>
+        <p>
+            There are four crystals below. By clicking on a crystal you will add 
+            a specific amount of points to your total score.
+        </p>
+        <p>
+            You win the game by matching your total score to random numbers, you lose
+            the game if your total score goes above the random number.
+        </p>
+        <p>
+            The value of each crsytal is hidden from you until you click on it.
+        </p>
+        <p>
+            Each time when the game starts, the game will change the values of each crystal.
+        </p>
         <br>
-        <div class="container">
-            <p>
-                You will be given a random number at the start of the game.
-            </p>
-            <p>
-                There are four crystals below. By clicking on a crystal you will add 
-                a specific amount of points to your total score.
-            </p>
-            <p>
-                You win the game by matching your total score to random numbers, you lose
-                the game if your total score goes above the random number.
-            </p>
-            <p>
-                The value of each crsytal is hidden from you until you click on it.
-            </p>
-            <p>
-                Each time when the game starts, the game will change the values of each crystal.
-            </p>
-            <br>
-        </div>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="container">
-                        <!--This is where the random number generated for each round will go.-->
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container">
+                    <!--This is where the random number generated for each round will go.-->
+                    <h2>
                         Random Number Generated: 
+                        <span id="target"></span>
+                    </h2> 
+                </div>
+            </div> 
+            <div class="col-md-3">
+                <!--This is where the wins:0, and losses:0, will go.-->
+                <div class="row">
+                    <div class="container">
+                        <h2>
+                            <strong>
+                                Wins: 
+                                <span id="win"></span>
+                            </strong>
+                        </h2>
                     </div>
-                </div> 
-                <div class="col-md-3">
-                    <div class="row">
-                        <div class="container">
-                             <p>
-                                Wins:
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="container">
-                            <!--This is where the wins:0, and losses:0, will go.-->
-                            <p>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <h2>
+                            <strong>
                                 Losses:
-                            </p>
-                        </div>                    
-                    </div>
+                                <span id="loss"></span>
+                            </strong>
+                        </h2>
+                    </div>                    
                 </div>
-                <div class="col-md-3">
-                    <!--Blank Boi-->
-                </div> 
-            </div>           
-        </div>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="container">
-                        <!--Images Go Here-->
-                        <img src="assets/images/emerald-crystal.png" alt="green-crystal" height="150px" width="100px">
-                    </div>
+            </div>
+            <div class="col-md-3">
+                <!--Blank Boi-->
+            </div> 
+        </div>           
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="container">
+                    <!--Images Go Here-->
+                    <img src="assets/images/emerald-crystal.png" class="btn1" id="greenCrystal" alt="green-crystal" height="150px" width="100px">
                 </div>
-                <div class="col-md-2">
-                    <div class="container">
-                        <!--Images Go Here-->
-                        <img src="assets/images/yellow-crystal.png" alt="yellow-crystal" height="150px" width="100px">
-                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="container">
+                    <!--Images Go Here-->
+                    <img src="assets/images/yellow-crystal.png" class="btn2 " id="yellowCrystal" alt="yellow-crystal" height="150px" width="100px">
                 </div>
-                <div class="col-md-2">
-                    <div class="container">
-                        <!--Images Go Here-->
-                        <img src="assets/images/ruby-crystal.png" alt="red-crystal" height="150px" width="100px">
-                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="container">
+                    <!--Images Go Here-->
+                    <img src="assets/images/ruby-crystal.png" class="btn3" id="redCrystal" alt="red-crystal" height="150px" width="100px">
                 </div>
-                <div class="col-md-2">
-                    <div class="container">
-                        <!--Images Go Here-->
-                        <img src="assets/images/magneta-crystal.png" alt="purple-crystal" height="150px" width="100px">
-                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="container">
+                    <!--Images Go Here-->
+                    <img src="assets/images/magneta-crystal.png" class="btn4" id="purpleCrystal" alt="purple-crystal" height="150px" width="100px">
                 </div>
             </div>
         </div>
-        <br>
-        <div class="container">
-            <p>
-                Your total score is: 
-            </p>
-        </div>
-        <br>
-        <div class="container">
-            <p>
-                <!--User Score, per round, goes here.-->
-                User Score: 
-            </p>
-        </div>
     </div>
-
-
-
-
-
+    <br>
+    <div class="container">
+        <h2>
+            Player's Score: 
+            <span id="playerScore"></span>
+        </h2>
+    </div>
+    <br>
+</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
